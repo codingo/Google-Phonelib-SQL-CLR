@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL-CLR-GooglePhoneLib", "SQL-CLR-GooglePhoneLib.sqlproj", "{D67CDCE9-58FA-4610-AE96-30D67E07252F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
