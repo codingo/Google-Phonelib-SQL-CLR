@@ -8,10 +8,7 @@ public partial class UserDefinedFunctions
 {
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GooglePhoneLibSqlFunction(string input)
-    {
-
-        
-        
+    {       
         return new SqlString (string.Empty);
     }
 
