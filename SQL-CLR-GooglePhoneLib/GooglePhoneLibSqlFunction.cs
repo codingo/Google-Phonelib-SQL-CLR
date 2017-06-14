@@ -9,12 +9,6 @@ using PhoneNumberUtil = com.google.i18n.phonenumbers.PhoneNumberUtil;
 
 public partial class UserDefinedFunctions
 {
-    [Microsoft.SqlServer.Server.SqlFunction]
-    public static SqlString GooglePhoneLibSqlFunction(string input)
-    {       
-        return new SqlString (string.Empty);
-    }
-
     // IsPossibleNumber - quickly guessing whether a number is a possible phonenumber by using only the length information, much faster than a full validation.
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleIsPossibleNumber(string input)
