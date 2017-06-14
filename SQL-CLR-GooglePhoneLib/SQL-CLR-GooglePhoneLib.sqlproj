@@ -68,13 +68,4 @@
   <ItemGroup>
     <Compile Include="GooglePhoneLibSqlFunction.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PhoneNumbers\PhoneNumbers.csproj">
-      <Name>PhoneNumbers</Name>
-      <Project>{775a5af2-fb45-4ce5-88d0-b1be8ad56459}</Project>
-      <Private>True</Private>
-      <IsModelAware>True</IsModelAware>
-      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL-CLR-GooglePhoneLib", "SQL-CLR-GooglePhoneLib.sqlproj", "{D67CDCE9-58FA-4610-AE96-30D67E07252F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers", "..\PhoneNumbers\PhoneNumbers.csproj", "{775A5AF2-FB45-4CE5-88D0-B1BE8AD56459}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GooglePhoneLib", "..\GooglePhoneLib\GooglePhoneLib.csproj", "{44774E51-586D-43C5-A5A4-438CD5A03BF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D67CDCE9-58FA-4610-AE96-30D67E07252F}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{775A5AF2-FB45-4CE5-88D0-B1BE8AD56459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{775A5AF2-FB45-4CE5-88D0-B1BE8AD56459}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{775A5AF2-FB45-4CE5-88D0-B1BE8AD56459}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{775A5AF2-FB45-4CE5-88D0-B1BE8AD56459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44774E51-586D-43C5-A5A4-438CD5A03BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44774E51-586D-43C5-A5A4-438CD5A03BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44774E51-586D-43C5-A5A4-438CD5A03BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44774E51-586D-43C5-A5A4-438CD5A03BF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
