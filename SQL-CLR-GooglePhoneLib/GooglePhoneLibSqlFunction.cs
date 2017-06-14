@@ -35,6 +35,7 @@ public partial class UserDefinedFunctions
         return new SqlString(string.Empty);
     }
 
+    // FindNumbers - finds numbers in text input
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleFindNumbers(string input)
     {
