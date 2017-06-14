@@ -10,7 +10,8 @@ using PhoneNumberUtil = com.google.i18n.phonenumbers.PhoneNumberUtil;
 public partial class UserDefinedFunctions
 {
     /// <summary>
-    /// IsPossibleNumber - quickly guessing whether a number is a possible phonenumber by using only the length information, much faster than a full validation.
+    /// IsPossibleNumber - quickly guessing whether a number is a possible phonenumber by using 
+    /// only the length information, much faster than a full validation.
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
