@@ -64,6 +64,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="libphonenumber">
+      <HintPath>packages\Google.LibPhoneNumber.1.0.0\lib\libphonenumber.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GooglePhoneLibSqlFunction.cs" />
