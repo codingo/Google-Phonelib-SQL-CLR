@@ -12,22 +12,22 @@ public partial class UserDefinedFunctions
         return new SqlString (string.Empty);
     }
 
-    public static SqlString IsPossibleNumber()
+    public static SqlString GoogleIsPossibleNumber(string input)
     {
         return new SqlString(string.Empty);
     }
 
-    public static SqlString IsNumberMatch()
+    public static SqlString GoogleIsNumberMatch(string input)
     {
         return new SqlString(string.Empty);
     }
 
-    public static SqlString IsValidNumber()
+    public static SqlString GoogleIsValidNumber(string input)
     {
         return new SqlString(string.Empty);
     }
 
-    public static SqlString FindNumbers()
+    public static SqlString GoogleFindNumbers(string input)
     {
         return new SqlString(string.Empty);
     }
