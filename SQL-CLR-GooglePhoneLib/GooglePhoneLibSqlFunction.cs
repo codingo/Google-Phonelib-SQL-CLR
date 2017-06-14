@@ -7,9 +7,31 @@ using Microsoft.SqlServer.Server;
 public partial class UserDefinedFunctions
 {
     [Microsoft.SqlServer.Server.SqlFunction]
-    public static SqlString GooglePhoneLibSqlFunction()
+    public static SqlString GooglePhoneLibSqlFunction(string input)
     {
-        // Put your code here
+
+        
+        
         return new SqlString (string.Empty);
+    }
+
+    public static SqlString IsPossibleNumber()
+    {
+        return new SqlString(string.Empty);
+    }
+
+    public static SqlString IsNumberMatch()
+    {
+        return new SqlString(string.Empty);
+    }
+
+    public static SqlString IsValidNumber()
+    {
+        return new SqlString(string.Empty);
+    }
+
+    public static SqlString FindNumbers()
+    {
+        return new SqlString(string.Empty);
     }
 }
