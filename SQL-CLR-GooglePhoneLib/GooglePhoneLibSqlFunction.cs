@@ -31,13 +31,13 @@ public partial class UserDefinedFunctions
     public static SqlString GoogleIsValidNumber(string input)
     {
 
-        var phoneUtil = PhoneNumberUtil.getInstance();
-        bool isValid = phoneUtil.isValidNumber(swissNumberStr);
+        //var phoneUtil = PhoneNumberUtil.getInstance();
+        //bool isValid = phoneUtil.isValidNumber(swissNumberStr);
 
-        try
-        {
-            Phonenumber numberInput = phoneUtil.parse(input, "CH");
-        }
+        //try
+        //{
+        //    Phonenumber numberInput = phoneUtil.parse(input, "CH");
+        //}
         return new SqlString(string.Empty);
     }
 
