@@ -52,7 +52,7 @@ namespace PhoneNumbers
         * @param regionCode  the region where the phone number is being dialed
         * @return  if the number might be used to connect to an emergency service in the given region.
         */
-        public bool ConnectsToEmergencyNumber(String number, String regionCode)
+        public bool ConnectsToEmergencyNumber(string number, string regionCode)
         {
             return MatchesEmergencyNumberHelper(number, regionCode, true /* allows prefix match */);
         }
@@ -67,12 +67,12 @@ namespace PhoneNumbers
         * @param regionCode  the region where the phone number is being dialed
         * @return  if the number exactly matches an emergency services number in the given region.
         */
-        public bool IsEmergencyNumber(String number, String regionCode)
+        public bool IsEmergencyNumber(string number, string regionCode)
         {
             return MatchesEmergencyNumberHelper(number, regionCode, false /* doesn't allow prefix match */);
         }
 
-        private bool MatchesEmergencyNumberHelper(String number, String regionCode,
+        private bool MatchesEmergencyNumberHelper(string number, string regionCode,
             bool allowPrefixMatch)
         {
             number = PhoneNumberUtil.ExtractPossibleNumber(number);
@@ -90,7 +90,7 @@ namespace PhoneNumbers
             }
             var emergencyNumberPattern =
                 new PhoneRegex(metadata.Emergency.NationalNumberPattern);
-            String normalizedNumber = PhoneNumberUtil.NormalizeDigitsOnly(number);
+            string normalizedNumber = PhoneNumberUtil.NormalizeDigitsOnly(number);
             // In Brazil, it is impossible to append additional digits to an emergency number to dial the
             // number.
             return (!allowPrefixMatch || regionCode.Equals("BR"))

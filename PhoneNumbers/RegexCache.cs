@@ -26,32 +26,38 @@ namespace PhoneNumbers
         class Entry
         {
             public PhoneRegex Regex;
-            public LinkedListNode<String> Node;
+            public LinkedListNode<string> Node;
         }
 
         private int size_;
-        private LinkedList<String> lru_;
-        private Dictionary<String, Entry> cache_;
+        private LinkedList<string> lru_;
+        private Dictionary<string, Entry> cache_;
 
         public RegexCache(int size)
         {
             size_ = size;
-            cache_ = new Dictionary<String, Entry>(size);
-            lru_ = new LinkedList<String>();
+            cache_ = new Dictionary<string, Entry>(size);
+            lru_ = new LinkedList<string>();
         }
 
-        public PhoneRegex GetPatternForRegex(String regex)
+        public PhoneRegex GetPatternForRegex(string regex)
         {
             lock (this)
             {
                 Entry e = null;
-                if (!cache_.TryGetValue(regex, out e))
+                if (cache_.TryGetValue(regex, out e))
+                {
+                    if (e.Node == lru_.First) return e.Regex;
+                    lru_.Remove(e.Node);
+                    lru_.AddFirst(e.Node);
+                }
+                else
                 {
                     // Insert new node
                     var r = new PhoneRegex(regex);
                     var n = lru_.AddFirst(regex);
 
-                    cache_[regex] = e = new Entry { Regex = r, Node = n };
+                    cache_[regex] = e = new Entry {Regex = r, Node = n};
                     // Check cache size
                     if (lru_.Count <= size_) return e.Regex;
 
@@ -59,20 +65,12 @@ namespace PhoneNumbers
                     cache_.Remove(o);
                     lru_.RemoveLast();
                 }
-                else
-                {
-                    if (e.Node != lru_.First)
-                    {
-                        lru_.Remove(e.Node);
-                        lru_.AddFirst(e.Node);
-                    }
-                }
                 return e.Regex;
             }
         }
 
         // This method is used for testing.
-        public bool ContainsRegex(String regex)
+        public bool ContainsRegex(string regex)
         {
             lock (this)
             {

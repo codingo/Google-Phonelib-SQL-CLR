@@ -250,3 +250,4 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/SQL-CLR-GooglePhoneLib/SQL-CLR-GooglePhoneLib.jfm
