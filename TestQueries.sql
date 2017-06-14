@@ -1,3 +1,5 @@
 ﻿SELECT dbo.GooglePhoneLibSqlFunction('test')
-
-SELECT dbo.Goo
+SELECT dbo.GoogleFindNumbers('test')
+SELECT dbo.GoogleIsNumberMatch('test')
+SELECT dbo.GoogleIsValidNumber('test')
+SELECT dbo.GoogleIsPossibleNumber('test')
