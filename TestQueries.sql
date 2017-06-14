@@ -1,3 +1,3 @@
 ﻿SELECT dbo.GooglePhoneLibSqlFunction('test')
 
-SELECT dbo.IsPossibleNumber('test')
+SELECT dbo.Goo

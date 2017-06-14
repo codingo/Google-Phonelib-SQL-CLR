@@ -12,21 +12,25 @@ public partial class UserDefinedFunctions
         return new SqlString (string.Empty);
     }
 
+    [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleIsPossibleNumber(string input)
     {
         return new SqlString(string.Empty);
     }
 
+    [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleIsNumberMatch(string input)
     {
         return new SqlString(string.Empty);
     }
 
+    [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleIsValidNumber(string input)
     {
         return new SqlString(string.Empty);
     }
 
+    [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleFindNumbers(string input)
     {
         return new SqlString(string.Empty);
