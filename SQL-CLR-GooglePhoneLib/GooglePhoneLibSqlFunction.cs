@@ -6,9 +6,17 @@ using com.google.i18n.phonenumbers;
 using libphonenumber;
 using Microsoft.SqlServer.Server;
 using PhoneNumberUtil = com.google.i18n.phonenumbers.PhoneNumberUtil;
+using String = java.lang.String;
 
 public partial class UserDefinedFunctions
 {
+    public static SqlString GooglePhoneParseSqlString(SqlString input)
+    {
+        var parser = PhoneNumberUtil.getInstance().parse(input.ToString(), "AU").toString();
+        return parser.ToString();
+    }
+
+
     /// <summary>
     /// IsPossibleNumber - quickly guessing whether a number is a possible phonenumber by using 
     /// only the length information, much faster than a full validation.
