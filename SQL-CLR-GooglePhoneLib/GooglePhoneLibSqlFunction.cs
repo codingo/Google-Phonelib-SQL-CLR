@@ -1,19 +1,15 @@
-using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using com.google.i18n.phonenumbers;
-using libphonenumber;
-using Microsoft.SqlServer.Server;
-using PhoneNumberUtil = com.google.i18n.phonenumbers.PhoneNumberUtil;
-using String = java.lang.String;
 
 public partial class UserDefinedFunctions
 {
+    [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GooglePhoneParseSqlString(SqlString input)
     {
-        var parser = PhoneNumberUtil.getInstance().parse(input.ToString(), "AU").toString();
-        return parser.ToString();
+        var phoneUtil = PhoneNumberUtil.getInstance();
+        var numberProto = phoneUtil.parse(input.ToString(), "AU");
+
+        return numberProto.ToString();
     }
 
 
@@ -26,6 +22,7 @@ public partial class UserDefinedFunctions
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GoogleIsPossibleNumber(string input)
     {
+        
         return new SqlString(string.Empty);
     }
 
@@ -46,9 +43,23 @@ public partial class UserDefinedFunctions
     /// <param name="input"></param>
     /// <returns></returns>
     [Microsoft.SqlServer.Server.SqlFunction]
-    public static SqlString GoogleIsValidNumber(string input)
+    public static SqlBoolean GoogleIsValidNumber(string input)
     {
-        return new SqlString(string.Empty);
+
+        return true;
+        //var rawnumber = "02476 123987";
+        //var cc = "GB";
+
+        //var util = PhoneNumberUtil.Instance;
+
+
+        //b.CountryCode = util.GetCountryCodeForRegion(cc);
+        //b.RawInput = rawnumber;
+
+        //var number = b.Build();
+
+        //return util.IsValidNumber(number);
+        //return new SqlString(string.Empty);
     }
 
     /// <summary>

@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="libphonenumber">
       <HintPath>packages\Google.LibPhoneNumber.1.0.0\lib\libphonenumber.dll</HintPath>
+      <GenerateSqlClrDdl>False</GenerateSqlClrDdl>
     </Reference>
   </ItemGroup>
   <ItemGroup>
