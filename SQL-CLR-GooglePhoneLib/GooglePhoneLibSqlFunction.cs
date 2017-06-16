@@ -1,13 +1,14 @@
 using System.Data.SqlTypes;
-using com.google.i18n.phonenumbers;
+using PhoneNumbers;
 
 public partial class UserDefinedFunctions
 {
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString GooglePhoneParseSqlString(SqlString input)
     {
-        var phoneUtil = PhoneNumberUtil.getInstance();
-        var numberProto = phoneUtil.parse(input.ToString(), "AU");
+
+        PhoneNumberUtil phoneUtil = PhoneNumberUtil.GetInstance();
+        PhoneNumber numberProto = phoneUtil.Parse(input.ToString(), "AU");
 
         return numberProto.ToString();
     }
